@@ -72,3 +72,36 @@ input, button{
     border: 1px solid var(--cor-borda);
     transition: all 0.3s ease;
 }
+
+ input:focus{
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+ }
+
+ button{
+    cursor: pointer;
+    font-weight: 600;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+ }
+
+ button:hover{
+    opacity: 0.85;
+ }
+
+ /* 6. Estilo do resultado */
+ #resultado{
+    margin-top: 20pc;
+    font-size: 18px;
+    font-weight: 600;
+    min-height: 25px;
+    color: var(--cor-texto-principal);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+ }
+
+ #resultado.visivel{
+    opacity: 
+ }
