@@ -73,5 +73,40 @@ desenhar(){
     ctx.fill();
     }
 
-    
+
+    atualizar (){
+        if(this.x > canvas.width || this.x <0){
+            this.direcaoX = -this.direcaoX;
+        }
+        if(this.y > canvas.heigh || this.y <0){
+            this.direcaoY = -this.direcaoY;
+        }
+        this.x += this.direcaoX
+        this.y += this.direcaoY
+        this.desenhar();
+    }
+}
+
+
+function init(){
+    particulasArray = [];
+    for(let i =0; i < numeroDeParticulas; i++){
+        let tamanho = Math.random() * 2 + 1;
+        let x = Math.random * (innerWidth - tamanho * 2) + tamanho;
+        let y = Math.random *(innerHeight - tamanho * 2) + tamanho;
+        let direcaoX = (Math.random() * 0.4) - 0.2;
+        let direcaoY = (Math.random() * 0.4) - 0.2;
+        let cor = '#007bff';
+        particulasArray.push(new Particula(x, y, direcaoX, direcaoY, tamanho, cor));
+    }
+}
+
+
+function conectar(){
+    for(let a = 0; a < particulasArray.length; a++){
+        for(let b = a; b < particulasArray.length; b++){
+            let distancia = ((particulasArray[a].x - particulasArray[b].x) * ( 
+            (particulasArray[a].x - particulasArray[b].x)) + ((particulasArray[a].x - particulasArray[b].x))
+        }
+    }
 }
